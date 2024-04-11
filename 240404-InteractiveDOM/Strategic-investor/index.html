@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Strategic Investor</title>
+</head>
+<style>
+
+  #root {
+    /* border: 2px solid red; */
+    font-family: poppins;
+    padding: 16px;
+    text-align: center;
+  }
+
+  .investorContent {
+    /* border: 2px solid green; */
+    padding-top: 2%;
+
+  }
+  .mainDiv {
+    width: 1280px;
+    margin: auto;
+    /* border: 2px solid goldenrod; */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+    margin: auto;
+  }
+
+  .investorContent {
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .investorName {
+    font-family: "Open Sans", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+  }
+
+  .investorCompany{
+    width: 140px;
+    height: 48px;
+    object-fit: contain;
+  }
+
+  .investorImage {
+    width: 100%;
+    height: 304px;
+    object-fit: fill;
+  }
+
+  .investorPosition {
+    font-family: "Open Sans", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+  }
+
+
+</style>
+<body>
+  <div id="root"></div>
+</body>
+</html>
+<script>
+  let root = document.querySelector("#root");
+
+  let mainDiv = document.createElement("div");
+  mainDiv.className = "mainDiv";
+
+  let obj = [
+    {
+      investorImage: "https://masai-website-images.s3.ap-south-1.amazonaws.com/Vijay_Shekhar_Sharma_Paytm_96f52579b8.jpg",
+      investorName: "Vijay Shekhar Sharma",
+      investorPosition: "Founder & CEO",
+      investorCompany: "https://masai-website-images.s3.ap-south-1.amazonaws.com/paytm_rect_06df45a24f.svg",
+    }, 
+    {
+      investorImage: "https://masai-website-images.s3.ap-south-1.amazonaws.com/Rectangle_427_637d69bb57.png",
+      investorName: "Kunal Shah",
+      investorPosition: "Founder",
+      investorCompany: "https://masai-website-images.s3.ap-south-1.amazonaws.com/cred_0a47d7b4f8.png",
+    },
+    {
+      investorImage: "https://masai-website-images.s3.ap-south-1.amazonaws.com/amrish_rau_pine_labs_144e5e587c.jpg",
+      investorName: "Amrish Rau",
+      investorPosition: "CEO",
+      investorCompany: "https://masai-website-images.s3.ap-south-1.amazonaws.com/pine_labs_0aa2407434.png",
+    },
+    {
+      investorImage: "https://masai-website-images.s3.ap-south-1.amazonaws.com/Sampad_swain_Instamojo_f12bf6341e.jpg",
+      investorName: "Sampad Swain",
+      investorPosition: "Co-Founder & CEO",
+      investorCompany: "https://masai-website-images.s3.ap-south-1.amazonaws.com/instamojo_8763e704f7.png",
+    }
+  ]
+
+  let heading = document.createElement("h1");
+  heading.innerText = "Strategic Investor";
+
+  
+  obj.forEach((ele,i) => {
+    
+    let investorDiv = document.createElement("div");
+    investorDiv.className = "investorContent";
+
+    //image
+    let Image = document.createElement("img");
+    Image.className = "investorImage";
+    Image.src = ele.investorImage;
+
+    // investor Name
+    let Name = document.createElement("h3");
+    Name.className = "investorName";
+    Name.innerText = ele.investorName;
+
+    //Position
+    let Position = document.createElement("p");
+    Position.className = "investorPosition";
+    Position.innerText = ele.investorPosition;
+
+    //Company
+    let Company = document.createElement("img");
+    Company.className = "investorCompany";
+    Company.src = ele.investorCompany;
+  
+    investorDiv.append(Image, Name, Position, Company);
+    mainDiv.append(investorDiv);
+    root.append(heading, mainDiv);
+  });
+
+  
+</script>

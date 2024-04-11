@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mini Calculator</title>
+  <link rel="stylesheet" href="./index.css";>
+</head>
+<body>
+  
+  <div id="root">
+    <!-- Display -->
+    <div id="display">0</div>
+    <!-- input -->
+    <div>
+      <input type="number" placeholder="Enter 1st Number" id="num1" class="input" />
+      <input type="number" placeholder="Enter 2nd Number" id="num2" class="input" />
+    </div>
+  </div>
+  <!-- buttons -->
+  <div id="airthOperators">
+    <button id="add" class="Operator" value="+">Add</button>
+    <button id="subtract" class="Operator" value="-">Subtract</button>
+    <button id="multiply" class="Operator" value="*">Multiply</button>
+    <button id="divide" class="Operator" value="/">Divide</button>
+  </div>
+</body>
+<script>
+  
+  let root = document.getElementById("root");
+  let display = document.getElementById("display");
+  // catching input
+  let num1 = document.querySelector("#num1").value;
+  let num2 = document.querySelector("#num2").value;
+
+  // catching button
+  let add = document.querySelector("#add");
+  let subtract = document.querySelector("#subtract");
+  let multiply = document.querySelector("#multiply");
+  let divide = document.querySelector("#divide");
+
+  function handleAddition() {
+    let num1 = document.querySelector("#num1").value;
+    let num2 = document.querySelector("#num2").value;
+
+    const result = Number(num1) + Number(num2);
+    display.innerHTML = result;
+    console.log(typeof result);
+    // console.log(typeof num1);
+  }
+
+  function handleSubtraction() {
+    let num1 = document.querySelector("#num1").value;
+    let num2 = document.querySelector("#num2").value;
+
+    const result = (+num1) - (+num2);
+    display.innerHTML = result;
+  }
+
+  function handleMultiplication() {
+    let num1 = document.querySelector("#num1").value;
+    let num2 = document.querySelector("#num2").value;
+
+    const result = num1 * num2;
+    display.innerHTML = result;
+  }
+
+  function handleDivision() {
+    let num1 = document.querySelector("#num1").value;
+    let num2 = document.querySelector("#num2").value;
+
+    const result = num1 / num2;
+    display.innerHTML = result;
+  }
+
+  add.addEventListener("click", handleAddition);
+  subtract.addEventListener("click", handleSubtraction);
+  multiply.addEventListener("click", handleMultiplication);
+  divide.addEventListener("click", handleDivision);
+
+
+</script>
+</html>
