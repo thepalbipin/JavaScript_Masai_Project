@@ -1,0 +1,58 @@
+*{
+  font-family: poppins;
+}
+
+.main {
+  width: 1280px;
+  margin: auto;
+  text-align: center;
+}
+
+.week-slot{
+  width: 80%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 12px;
+}
+
+.slot {
+  /* width: 6rem; */
+  height: 2rem;
+  font-weight: 600;
+  padding-top: 4px;
+  border: none;
+  border-radius: 4px;
+  /* background-color: rgb(248, 130, 27); */
+}
+
+.slot:nth-child(2n+2) {
+  background-color: #2d953b;
+}
+
+.slot:nth-child(3n) {
+  background-color: #eccb15;
+}
+
+.slot:nth-child(3n+2) {
+  background-color: #f03434;
+}
+
+.slot:nth-child(6n+1) {
+  background-color: #34cef0;
+}
+
+.slot:first-child {
+  background-color: transparent;
+}
+
+/* .slot:nth-child(n+67):nth-child(-n+72){
+  background-color: black;
+} */
+
+.slot:nth-child(n+67){
+  grid-column: 1 / 7;
+  background-color: tomato;
+  text-align: start;
+  padding-left: 4px;
+}

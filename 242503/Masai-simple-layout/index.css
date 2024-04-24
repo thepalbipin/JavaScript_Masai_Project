@@ -1,0 +1,38 @@
+.data {
+  margin: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.masai-logo {
+  width: 12rem;
+  margin: 12px 0;
+}
+
+.poster-girl {
+  width: 560px;
+}
+
+p {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+table {
+  width: 400px;
+  text-align: left;
+  font-weight: 200;
+}
+
+form {
+  width: 250px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2px;
+}
+
+form input {
+  border: 2px solid rgb(157, 154, 154);
+  opacity: 60%;
+}
